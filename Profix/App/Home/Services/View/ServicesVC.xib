@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ServicesVC" customModule="Profix" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="Hku-dg-U2Y" id="7pY-0z-yel"/>
+                <outlet property="confirmButton" destination="z2P-SX-Bn1" id="Maj-JU-uRB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Apn-se-v3S" userLabel="ContainerStackView">
+                    <rect key="frame" x="0.0" y="134" width="393" height="650"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Hku-dg-U2Y">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="600"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xba-6B-5t2">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2P-SX-Bn1" userLabel="ConfirmButton" customClass="MainButton" customModule="Profix" customModuleProvider="target">
+                            <rect key="frame" x="16" y="616" width="361" height="34"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Button"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="confirm_services"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="didTapConfirm:" destination="-1" eventType="touchUpInside" id="aKg-ec-Acy"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Hku-dg-U2Y" firstAttribute="leading" secondItem="Apn-se-v3S" secondAttribute="leading" id="FJp-pM-SDv"/>
+                        <constraint firstAttribute="trailing" secondItem="z2P-SX-Bn1" secondAttribute="trailing" constant="16" id="Oo2-tN-7dO"/>
+                        <constraint firstItem="z2P-SX-Bn1" firstAttribute="leading" secondItem="Apn-se-v3S" secondAttribute="leading" constant="16" id="Viv-S8-dbh"/>
+                        <constraint firstAttribute="trailing" secondItem="Hku-dg-U2Y" secondAttribute="trailing" id="hqh-6R-fl8"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Apn-se-v3S" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="NTb-8t-WPf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Apn-se-v3S" secondAttribute="bottom" id="b1x-4T-5kD"/>
+                <constraint firstItem="Apn-se-v3S" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gr5-lg-Yx0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Apn-se-v3S" secondAttribute="trailing" id="lMF-87-szV"/>
+            </constraints>
+            <point key="canvasLocation" x="-77" y="127"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
